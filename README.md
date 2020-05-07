@@ -16,3 +16,53 @@ Host Connection Name
     
 Now Connect
     
+    Error 500 internal Server
+    
+    sudo chmod -R 755 laravel_blog(project Name)
+    sudo chmod -R o+w laravel_blog/storage
+    
+
+Create the .env file and also run :
+
+php artisan key:generate
+
+This worked for me after pulling a git project.
+
+After creating .env file and generating the key, run the code below:
+
+php artisan cache:clear 
+php artisan config:clear
+
+
+    
+
+    
+    
+Apache .htaccess public access
+
+
+cd /etc/apache2/mods-enabled/
+
+If it does not exist execute the following excerpt:
+
+sudo a2enmod rewrite
+
+Otherwise, change the Apache configuration file to consolidate use of the "friendly URL".
+
+sudo nano /etc/apache2/apache2.conf
+
+Find the following code inside the editor:
+
+<Directory /var/www/> 
+   Options Indexes FollowSymLinks
+   AllowOverride None
+   Require all granted
+</Directory> 
+
+Change to:
+
+<Directory /var/www/> 
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
