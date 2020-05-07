@@ -88,3 +88,7 @@ htaccess
     RewriteRule ^ server.php
 </IfModule>
 
+
+Storage link not found
+php artisan storage:link
+
