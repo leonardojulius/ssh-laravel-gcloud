@@ -92,3 +92,5 @@ htaccess
 Storage link not found
 php artisan storage:link
 
+#Rename root file
+mv /home/user/oldname /home/user/newname
